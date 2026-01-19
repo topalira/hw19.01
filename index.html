@@ -8,6 +8,12 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+        body{
+            background-color:#C8B6A6;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,7 +25,7 @@
     <script type="text/babel">
         const book1 = {
             name: 'Назва: «Часодії»',
-            author: 'Наталія Щерба',
+            author: 'Автор: Наталія Щерба',
             genre: 'Жанр: підліткове фентезі, пригоди',
             country: 'Країна: Україна',
             numberOfBooks: 'Кількість книг: 6',
@@ -27,96 +33,88 @@
             Image: '/book1.jpg'
         };
         const book2 = {
-            name: 'Назва: «Часодії»',
-            author: 'Наталія Щерба',
-            genre: 'Жанр: підліткове фентезі, пригоди',
-            country: 'Країна: Україна',
-            numberOfBooks: 'Кількість книг: 6',
+            name: 'Назва: «Шах і мат»',
+            author: 'Автор: Алі Гейзелвуд',
+            genre: 'Жанр: сучасна проза, любовна історія',
+            country: 'Країна: США',
+            numberOfBooks: 'Кількість книг: 1',
             topic: 'Тема: Магія часу та його вплив на життя людини, боротьба добра і зла, дорослішання, пошук себе, дружба й відповідальність за власний вибір',
-            Image: '/book1.jpg'
+            Image: '/book2.jpg'
         };
         const book3 = {
-            name: 'Назва: «Часодії»',
-            author: 'Наталія Щерба',
-            genre: 'Жанр: підліткове фентезі, пригоди',
-            country: 'Країна: Україна',
-            numberOfBooks: 'Кількість книг: 6',
-            topic: 'Тема: Магія часу та його вплив на життя людини, боротьба добра і зла, дорослішання, пошук себе, дружба й відповідальність за власний вибір',
-            Image: '/book1.jpg'
+            name: 'Назва: «Маленький принц»',
+            author: 'Автор: Антуан де Сент-Екзюпері',
+            genre: 'Жанр: дитяча література, філософська казка',
+            country: 'Країна: Франція',
+            numberOfBooks: 'Кількість книг: 1',
+            topic: 'Тема: Маленький принц мандрує планетами, зустрічає різних дорослих і вчиться цінувати дружбу, любов, відповідальність та духовні цінності',
+            Image: '/book3.jpg'
         };
         const StyleObj = {
-            color: 'black',
-            backgroundColor: 'beige',
-            border: '2px solid black',
+            color: '#2A2A2A',
+            backgroundColor: '#F5F0E6',
+            border: '2px solid #E6D5B8',
             marginLeft: '10px',
             padding: '10px',
             borderRadius: '20px',
-            width: '300px'
-        }
+            width: '400px'
+        };
         const containerStyle = {
             display: 'flex',
             flexDirection: 'row',
-            justifyContent: 'center',
-            gap: '20px'
+            justifyContent: 'space-evenly',
+            gap: '20px',
         };
         const StyleImg = {
             width: '300px',
             height: '400px',
             borderRadius: '20px',
+            display: 'block',
+            margin: '0 auto'
         }
         ReactDOM.createRoot(document.getElementById("root"))
             .render(
-                <div>
                 <div style={containerStyle}>
                     <div style={StyleObj}>
                         <div>
                             <img src={book1.Image} style={StyleImg} />
-                        </div>
-                        <div>
-                            <p>{book1.name}</p>
-                            <p>{book1.author}</p>
-                            <p>{book1.genre}</p>
-                            <p>{book1.country}</p>
-                            <p>{book1.numberOfBooks}</p>
-                            <p>{book1.topic}</p>
+                            <div>
+                                <p>{book1.name}</p>
+                                <p>{book1.author}</p>
+                                <p>{book1.genre}</p>
+                                <p>{book1.country}</p>
+                                <p>{book1.numberOfBooks}</p>
+                                <p>{book1.topic}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div style={containerStyle}>
                     <div style={StyleObj}>
                         <div>
                             <img src={book2.Image} style={StyleImg} />
-                        </div>
-                        <div>
-                            <p>{book2.name}</p>
-                            <p>{book2.author}</p>
-                            <p>{book2.genre}</p>
-                            <p>{book2.country}</p>
-                            <p>{book2.numberOfBooks}</p>
-                            <p>{book2.topic}</p>
+                            <div>
+                                <p>{book2.name}</p>
+                                <p>{book2.author}</p>
+                                <p>{book2.genre}</p>
+                                <p>{book2.country}</p>
+                                <p>{book2.numberOfBooks}</p>
+                                <p>{book2.topic}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-       
-                <div style={containerStyle}>
                     <div style={StyleObj}>
                         <div>
                             <img src={book3.Image} style={StyleImg} />
-                        </div>
-                        <div>
-                            <p>{book3.name}</p>
-                            <p>{book3.author}</p>
-                            <p>{book3.genre}</p>
-                            <p>{book3.country}</p>
-                            <p>{book3.numberOfBooks}</p>
-                            <p>{book3.topic}</p>
+                            <div>
+                                <p>{book3.name}</p>
+                                <p>{book3.author}</p>
+                                <p>{book3.genre}</p>
+                                <p>{book3.country}</p>
+                                <p>{book3.numberOfBooks}</p>
+                                <p>{book3.topic}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                </div>
-            );
+                </div>);
 
     </script>
 </body>
