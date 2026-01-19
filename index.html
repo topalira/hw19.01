@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <div id="app"> </div>
+        <div id="app2"> </div>
+        <div id="app3"> </div>
+    </div>
+    <script type="text/babel">
+        const book1 = {
+            name: 'Назва: «Часодії»',
+            author: 'Наталія Щерба',
+            genre: 'Жанр: підліткове фентезі, пригоди',
+            country: 'Країна: Україна',
+            numberOfBooks: 'Кількість книг: 6',
+            topic: 'Тема: Магія часу та його вплив на життя людини, боротьба добра і зла, дорослішання, пошук себе, дружба й відповідальність за власний вибір',
+            Image: '/book1.jpg'
+        };
+        const book2 = {
+            name: 'Назва: «Часодії»',
+            author: 'Наталія Щерба',
+            genre: 'Жанр: підліткове фентезі, пригоди',
+            country: 'Країна: Україна',
+            numberOfBooks: 'Кількість книг: 6',
+            topic: 'Тема: Магія часу та його вплив на життя людини, боротьба добра і зла, дорослішання, пошук себе, дружба й відповідальність за власний вибір',
+            Image: '/book1.jpg'
+        };
+        const book3 = {
+            name: 'Назва: «Часодії»',
+            author: 'Наталія Щерба',
+            genre: 'Жанр: підліткове фентезі, пригоди',
+            country: 'Країна: Україна',
+            numberOfBooks: 'Кількість книг: 6',
+            topic: 'Тема: Магія часу та його вплив на життя людини, боротьба добра і зла, дорослішання, пошук себе, дружба й відповідальність за власний вибір',
+            Image: '/book1.jpg'
+        };
+        const StyleObj = {
+            color: 'black',
+            backgroundColor: 'beige',
+            border: '2px solid black',
+            marginLeft: '10px',
+            padding: '10px',
+            borderRadius: '20px',
+            width: '300px'
+        }
+        const containerStyle = {
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center',
+            gap: '20px'
+        };
+        const StyleImg = {
+            width: '300px',
+            height: '400px',
+            borderRadius: '20px',
+        }
+        ReactDOM.createRoot(document.getElementById("root"))
+            .render(
+                <div>
+                <div style={containerStyle}>
+                    <div style={StyleObj}>
+                        <div>
+                            <img src={book1.Image} style={StyleImg} />
+                        </div>
+                        <div>
+                            <p>{book1.name}</p>
+                            <p>{book1.author}</p>
+                            <p>{book1.genre}</p>
+                            <p>{book1.country}</p>
+                            <p>{book1.numberOfBooks}</p>
+                            <p>{book1.topic}</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style={containerStyle}>
+                    <div style={StyleObj}>
+                        <div>
+                            <img src={book2.Image} style={StyleImg} />
+                        </div>
+                        <div>
+                            <p>{book2.name}</p>
+                            <p>{book2.author}</p>
+                            <p>{book2.genre}</p>
+                            <p>{book2.country}</p>
+                            <p>{book2.numberOfBooks}</p>
+                            <p>{book2.topic}</p>
+                        </div>
+                    </div>
+                </div>
+
+       
+                <div style={containerStyle}>
+                    <div style={StyleObj}>
+                        <div>
+                            <img src={book3.Image} style={StyleImg} />
+                        </div>
+                        <div>
+                            <p>{book3.name}</p>
+                            <p>{book3.author}</p>
+                            <p>{book3.genre}</p>
+                            <p>{book3.country}</p>
+                            <p>{book3.numberOfBooks}</p>
+                            <p>{book3.topic}</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            );
+
+    </script>
+</body>
+
+</html>
